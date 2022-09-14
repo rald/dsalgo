@@ -12,11 +12,12 @@ class Node:
 def Stack_Print(top):
   current_node=top
   print('top->',end='')
-  while(current_node):
+  while current_node:
     current_node.print()
     print('->',end='');
     current_node=current_node.next
-  print('(None)')
+  print('(None)  ',end='')
+  print('Length ',Stack_Length(top))
 
 
 
@@ -37,6 +38,14 @@ def Stack_Pop(top):
   return top,node
   
 
+
+def Stack_Length(top):
+  current_node=top
+  n=0
+  while current_node:
+    n+=1
+    current_node=current_node.next
+  return n     
 
 
 
